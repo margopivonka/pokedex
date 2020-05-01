@@ -10,13 +10,12 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
 
-def pokemon_name(number):
+def pokemon_info(number):
     request_url = f"http://pokeapi.co/api/v2/pokemon/{num}"
     response = requests.get(request_url)
     parsed_response = json.loads(response.text)
-    name = parsed_response["name"].title()
     #pokemonDict = json.loads(data.decode("UTF-8"))
-    return name #pokemonDict
+    return parsed_response #pokemonDict
 
 def pokemon_image(number):
     request_url2 = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{num}.png"
@@ -27,15 +26,15 @@ def pokemon_image(number):
 
 num = str(input("Select a number between 1 and 807: "))
 
-data = pokemon_name(num)
-
-print(data)
+data = pokemon_info(num)
+name = data["name"].title()
 
 image_data = pokemon_image(num)
-
 img = mpimg.imread(image_data)
 plt.imshow(img)
 plt.show()
+
+print(name)
 
 
 
