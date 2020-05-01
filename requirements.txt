@@ -1,0 +1,9 @@
+#requirements.txt file
+
+python-dotenv
+requests
+
+Flask
+
+#Heroku uses this package to know which app to run
+gunicorn
