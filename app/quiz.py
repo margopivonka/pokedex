@@ -3,7 +3,7 @@
 #
 
 # Favorite color
-color = input("What is your favorite color? \n A. Red \n B. Blue \n C. Green \n D. Yellow \n \n Please enter corresponding letter: ")
+color = input("What is your favorite color? \n A. Red \n B. Blue \n C. Green \n D. Yellow \n \n Please enter corresponding letter: ").upper()
 
 if color =="A":
     color_value = 1
@@ -20,7 +20,8 @@ user_score = color_value
 # Favorite Season
 #
 
-season = input("What is your favorite season? \n A. Fall \n B. Winter \n C. Spring \n D. Summer \n \n Please enter corresponding letter: ")
+season = input("What is your favorite season? \n A. Fall \n B. Winter \n C. Spring \n D. Summer \n \n Please enter corresponding letter: ").upper()
+
 
 if season =="A":
     season_value = 1
@@ -39,7 +40,7 @@ user_score = color_value + season_value
 # Favorite Food
 #
 
-food = input("What is your favorite food? \n A. Pizza \n B. Tacos \n C. Noodles \n D. Burgers \n \n Please enter corresponding letter: ")
+food = input("What is your favorite food? \n A. Pizza \n B. Tacos \n C. Noodles \n D. Burgers \n \n Please enter corresponding letter: ").upper()
 
 if food =="A":
     food_value = 1
@@ -58,7 +59,7 @@ user_score = color_value + season_value + food_value
 # Favorite Animal
 #
 
-animal = input("What is your favorite animal? \n A. Dog \n B. Cat \n C. Monkey \n D. Tiger \n \n Please enter corresponding letter: ")
+animal = input("What is your favorite animal? \n A. Dog \n B. Cat \n C. Monkey \n D. Tiger \n \n Please enter corresponding letter: ").upper()
 
 if animal =="A":
     animal_value = 1
@@ -75,7 +76,7 @@ user_score = color_value + season_value + food_value + animal_value
 # Elemental ID
 #
 
-element = input("What earthly element do you best identify with? \n A. Earth \n B. Wind \n C. Fire \n D. Water \n \n Please enter corresponding letter: ")
+element = input("What earthly element do you best identify with? \n A. Earth \n B. Wind \n C. Fire \n D. Water \n \n Please enter corresponding letter: ").upper()
 
 if element =="A":
     element_value = 1
