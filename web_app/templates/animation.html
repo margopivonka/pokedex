@@ -1,5 +1,8 @@
+{% extends "bootstrap_layout.html" %}
+{% set active_page = "animation" %}
+
 <img src="http://fc00.deviantart.net/fs70/i/2012/308/0/b/__hd___pokemon_logo___hd___by_peetzaahhh2010-d5k08gz.png" />
-<h2 id="title">Meanwhile in Pallet Town...</h2>
+<h2 id="title">Welcome to our App!...</h2>
 
     <div class="pokonami">
         <h3>Click Anywhere to Begin</h3>
@@ -7,3 +10,5 @@
 
     <audio id="pallet" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/pallet.mp3" autoplay muted preload></audio>
     <audio id="battle" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/battle.mp3" preload muted autoplay></audio>
+
+{% endblock %}
