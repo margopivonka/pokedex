@@ -8,6 +8,10 @@ by Margo and Michael
 ## Usage
 
 
+## Set up Environement
+
+conda create -n poke-env python=3.7
+
 ## Packages to Install
 gunicorn
 python-dotenv
