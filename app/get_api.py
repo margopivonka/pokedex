@@ -6,19 +6,19 @@ import os
 import json
 import requests
 from dotenv import load_dotenv
-
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
 
-def get_pokemon_name(number):
+def pokemon_name(number):
     request_url = f"http://pokeapi.co/api/v2/pokemon/{num}"
     response = requests.get(request_url)
     parsed_response = json.loads(response.text)
+    name = parsed_response["name"].title()
     #pokemonDict = json.loads(data.decode("UTF-8"))
-    return parsed_response #pokemonDict
+    return name #pokemonDict
 
-def get_pokemon_image(number):
+def pokemon_image(number):
     request_url2 = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{num}.png"
     #response2 = requests.get(request_url2)
     #parsed_response = json.loads(response2.text)
@@ -27,11 +27,11 @@ def get_pokemon_image(number):
 
 num = str(input("Select a number between 1 and 807: "))
 
-data = get_pokemon_name(num)
+data = pokemon_name(num)
 
-print(data["name"].title())
+print(data)
 
-image_data = get_pokemon_image(num)
+image_data = pokemon_image(num)
 
 img = mpimg.imread(image_data)
 plt.imshow(img)
