@@ -14,3 +14,8 @@ def about():
     print("VISITED ABOUT PAGE")
     return render_template("about.html")
 
+@home_routes.route("/quiz")
+def quiz():
+    print("VISTED QUIZ PAGE")
+    return render_template("quiz.html")
+

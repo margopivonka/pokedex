@@ -3,6 +3,7 @@
 python-dotenv
 requests
 pytest
+matplotlib
 
 
 Flask
