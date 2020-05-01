@@ -24,3 +24,10 @@ json
 pokeapi key
 
 accessing name ["forms"]["name"]
+
+## Flask 
+
+```py
+export FLASK_APP=web_app
+flask run
+```
