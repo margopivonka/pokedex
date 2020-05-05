@@ -28,11 +28,64 @@ def quiz_submit(choice=None):
     #print("FORM DATA:", dict(request.form)) #> {'full_name': 'Example User', 'email_address': 'me@example.com', 'country': 'US'}
     #print("REQUEST VALUES:", dict(request.values))
     results=dict(request.form) #turns user results into a dictionary so we can assign and add up the values
-    print(results)
-    print(results["choice1"])
+    #print(results)
+    #print(results["choice1"])
 
     if results["choice1"]=="red":
-        print("user_score=1")
+        color_value=1
+    if results["choice1"]=="blue":
+        color_value=2
+    if results["choice1"]=="green":
+        color_value=3
+    if results["choice1"]=="yellow":
+        color_value=4
+    #print(color_value)
+    
+    if results["choice2"]=="fall":
+        season_value=1
+    if results["choice2"]=="winter":
+        season_value=2
+    if results["choice2"]=="spring":
+        season_value=3
+    if results["choice2"]=="summer":
+        season_value=4
+    #print(season_value)
+
+    if results["choice3"]=="pizza":
+        food_value=1
+    if results["choice3"]=="tacos":
+        food_value=2
+    if results["choice3"]=="noodles":
+        food_value=3
+    if results["choice3"]=="nugs":
+        food_value=4
+    #print(food_value)
+
+    if results["choice4"]=="dog":
+        animal_value=1
+    if results["choice4"]=="cat":
+        animal_value=2
+    if results["choice4"]=="monkey":
+        animal_value=3
+    if results["choice4"]=="tiger":
+        animal_value=4
+    #print(animal_value)
+
+    if results["choice5"]=="earth":
+        element_value=1
+    if results["choice5"]=="wind":
+        element_value=2
+    if results["choice5"]=="fire":
+        element_value=3
+    if results["choice5"]=="water":
+        element_value=4
+    #print(element_value)
+
+    user_score=color_value+season_value+food_value+animal_value+element_value
+    print("SCORE: ", user_score)
+
+
+
     #
     # should be able to use if statements to assign and add up values
     #
