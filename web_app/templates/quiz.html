@@ -2,19 +2,62 @@
 {% set active_page = "quiz" %}
 
 {% block content %}
+  <h2>Take the quiz!</h2>
+  <br/>
+  <br/>
 
-<h1> TAKE THE QUIZ </h1>
+  <form action="/results" method="POST">
 
-<p>Please fil out the quiz below to find your spirit Pokemon</p>
+    <label>What is your favorite color?</label>
+    <select name="choice1">
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="yellow">Yellow</option>
+    </select>
+    <br/>
+    <br/>
 
+    <label>What is your favorite season?</label>
+    <select name="choice2">
+      <option value="fall">Fall</option>
+      <option value="winter">Winter</option>
+      <option value="spring">Spring</option>
+      <option value="summer">Summer</option>
+    </select>
+    <br/>
+    <br/>
 
- <p1>button 1-5</p1>
+    <label>What is your favorite food?</label>
+    <select name="choice3">
+      <option value="pizza">Pizza</option>
+      <option value="tacos">Tacos</option>
+      <option value="noodles">Noodles</option>
+      <option value="nugs">Chicken Nuggets</option>
+    </select>
+    <br/>
+    <br/>
 
+    <label>What is your favorite animal?</label>
+    <select name="choice4">
+      <option value="dog">Dog</option>
+      <option value="cat">Cat</option>
+      <option value="monkey">Monkey</option>
+      <option value="tiger">Tiger</option>
+    </select>
+    <br/>
+    <br/>
 
+    <label>What element do you most identify with?</label>
+    <select name="choice5">
+      <option value="earth">Earth</option>
+      <option value="wind">Wind</option>
+      <option value="fire">Fire</option>
+      <option value="water">Water</option>
+    </select>
+    <br/>
+    <br/>
 
-
-<form action=""></form>
-
-<form action=""></form>
-
+    <button>Submit</button>
+  </form>
 {% endblock %}

@@ -9,8 +9,11 @@ by Margo and Michael
 
 
 ## Set up Environement
-
+```
 conda create -n poke-env python=3.7
+conda activate poke-env
+```
+
 
 ## Packages to Install
 gunicorn
@@ -19,6 +22,10 @@ requests
 Flask
 gunicorn
 json
+
+```
+pip install -r requirements.txt
+```
 
 ## Explaining API Key
 pokeapi key
