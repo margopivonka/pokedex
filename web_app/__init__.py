@@ -17,7 +17,7 @@ def create_app():
     app.config["SECRET_KEY"] = SECRET_KEY
 
     app.register_blueprint(home_routes)
-    app.register_blueprint(quiz_routes)
+    #app.register_blueprint(quiz_routes)
 
     return app
 
