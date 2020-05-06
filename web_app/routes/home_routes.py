@@ -74,6 +74,9 @@ def quiz_submit(choice=None):
         element_value=4
 
     user_score=color_value+season_value+food_value+animal_value+element_value
+    scale = randint(1,40)
+    user_score = user_score * scale
+
     print("SCORE: ", user_score)
 
     flash("Quiz submitted successfully!", "success")
