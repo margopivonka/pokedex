@@ -10,89 +10,91 @@ import matplotlib.image as mpimg
 from random import randint
 
 def pokemon_info(number):
-    request_url = f"http://pokeapi.co/api/v2/pokemon/{user_score}"
+    request_url = f"http://pokeapi.co/api/v2/pokemon/{number}"
     response = requests.get(request_url)
     parsed_response = json.loads(response.text)
     return parsed_response
 
 def pokemon_image(number):
-    request_url2 = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{user_score}.png"
+    request_url2 = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{number}.png"
     return request_url2
 
-# Favorite color
-color = input("What is your favorite color? \n A. Red \n B. Blue \n C. Green \n D. Yellow \n \n Please enter corresponding letter: ").upper()
+if __name__ == "__main__":
 
-if color =="A":
-    color_value = 1
-elif color == "B":
-    color_value = 2
-elif color == "C":
-    color_value = 3
-elif color == "D":
-    color_value = 4
+    # Favorite color
+    color = input("What is your favorite color? \n A. Red \n B. Blue \n C. Green \n D. Yellow \n \n Please enter corresponding letter: ").upper()
 
-# Favorite Season
-season = input("What is your favorite season? \n A. Fall \n B. Winter \n C. Spring \n D. Summer \n \n Please enter corresponding letter: ").upper()
+    if color =="A":
+        color_value = 1
+    elif color == "B":
+        color_value = 2
+    elif color == "C":
+        color_value = 3
+    elif color == "D":
+        color_value = 4
 
-if season =="A":
-    season_value = 1
-elif season == "B":
-    season_value = 2
-elif season == "C":
-    season_value = 3
-elif season == "D":
-    season_value = 4
+    # Favorite Season
+    season = input("What is your favorite season? \n A. Fall \n B. Winter \n C. Spring \n D. Summer \n \n Please enter corresponding letter: ").upper()
 
-# Favorite Food
-food = input("What is your favorite food? \n A. Pizza \n B. Tacos \n C. Noodles \n D. Burgers \n \n Please enter corresponding letter: ").upper()
+    if season =="A":
+        season_value = 1
+    elif season == "B":
+        season_value = 2
+    elif season == "C":
+        season_value = 3
+    elif season == "D":
+        season_value = 4
 
-if food =="A":
-    food_value = 1
-elif food == "B":
-    food_value = 2
-elif food == "C":
-    food_value = 3
-elif food == "D":
-    food_value = 4
+    # Favorite Food
+    food = input("What is your favorite food? \n A. Pizza \n B. Tacos \n C. Noodles \n D. Burgers \n \n Please enter corresponding letter: ").upper()
 
-# Favorite Animal
-animal = input("What is your favorite animal? \n A. Dog \n B. Cat \n C. Monkey \n D. Tiger \n \n Please enter corresponding letter: ").upper()
+    if food =="A":
+        food_value = 1
+    elif food == "B":
+        food_value = 2
+    elif food == "C":
+        food_value = 3
+    elif food == "D":
+        food_value = 4
 
-if animal =="A":
-    animal_value = 1
-elif animal == "B":
-    animal_value = 2
-elif animal == "C":
-    animal_value = 3
-elif animal == "D":
-    animal_value = 4
+    # Favorite Animal
+    animal = input("What is your favorite animal? \n A. Dog \n B. Cat \n C. Monkey \n D. Tiger \n \n Please enter corresponding letter: ").upper()
 
-# Elemental ID
-element = input("What earthly element do you best identify with? \n A. Earth \n B. Wind \n C. Fire \n D. Water \n \n Please enter corresponding letter: ").upper()
+    if animal =="A":
+        animal_value = 1
+    elif animal == "B":
+        animal_value = 2
+    elif animal == "C":
+        animal_value = 3
+    elif animal == "D":
+        animal_value = 4
 
-if element =="A":
-    element_value = 1
-elif element == "B":
-    element_value = 2
-elif element == "C":
-    element_value = 3
-elif element == "D":
-    element_value = 4
+    # Elemental ID
+    element = input("What earthly element do you best identify with? \n A. Earth \n B. Wind \n C. Fire \n D. Water \n \n Please enter corresponding letter: ").upper()
 
-user_score=color_value+season_value+food_value+animal_value+element_value
-scale = randint(1,40)
-user_score = user_score * scale
+    if element =="A":
+        element_value = 1
+    elif element == "B":
+        element_value = 2
+    elif element == "C":
+        element_value = 3
+    elif element == "D":
+        element_value = 4
 
-#FIND POKEMON NAME
-data = pokemon_info(user_score)
-name = data["name"].title()
+    user_score=color_value+season_value+food_value+animal_value+element_value
+    scale = randint(1,40)
+    user_score = user_score * scale
 
-#FIND POKEMON IMAGE
-image_data = pokemon_image(user_score)
-img = mpimg.imread(image_data)
+    #FIND POKEMON NAME
+    data = pokemon_info(user_score)
+    name = data["name"].title()
 
-#PRINT NAME AND IMAGE
-print("SCORE: ", user_score)
-print(f"You are a {name}! This means that you are totally awesome!!!")
-plt.imshow(img)
-plt.show()
+    #FIND POKEMON IMAGE
+    image_data = pokemon_image(user_score)
+    img = mpimg.imread(image_data)
+
+    #PRINT NAME AND IMAGE
+    print("SCORE: ", user_score)
+    print(f"You are a {name}! This means that you are totally awesome!!!")
+    plt.imshow(img)
+    plt.show()
