@@ -53,4 +53,13 @@ The pokéapi is an ever-evolving (no pun intended) list of pokémon. Each pokém
 
 For more information regarding Pokémon API visit https://pokeapi.co/docs/v2.html
 
-## HAVE FUN! 
+## Special Thanks!
+We would like to thank Professor Rossetti for opening our eyes to the wonders of API keys, web app development, code integration services, and the amazing world of code!
+
+We would also like to thank our TA, Kuran, for helping us when we fall down along the way.
+
+Shout out to any Pokemon ethusiasts that use and appreciate this app.
+
+Finally, special thanks to the world wide web for having plentiful resources to supplement our in-class leanring.
+
+# HAVE FUN! 
