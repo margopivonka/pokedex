@@ -1,40 +1,56 @@
-# pokedex
+# Pokémon Spirit Animal
+
+![image](https://user-images.githubusercontent.com/59658326/81142779-81675a80-8f3e-11ea-9d62-1959e41e66db.png)
+
 OPIM 244 Final Project
 by Margo and Michael
 
-## Image of pokemon
+## Description
+This web application is a five question quiz that determines your spirit pokémon. By responding to the quiz on the web application, a user_score is inputed and a pokémon is outputed. 
 
+This web app uses the poké API.
+
+```sh
+https://pokeapi.co/
+```
 
 ## Usage
 
-
-## Set up Environement
-```
+#### Set up a Virtual Enviornment
+```sh
 conda create -n poke-env python=3.7
 conda activate poke-env
 ```
-
-
-## Packages to Install
+#### Install the requirements file
+```sh
+pip install -r requirements.txt
+```
+#### Packages and Modules
+```sh 
 gunicorn
 python-dotenv
 requests
 Flask
-gunicorn
 json
-
-```
-pip install -r requirements.txt
 ```
 
-## Explaining API Key
-pokeapi key
+#### Run the application
+To run the application on your terminal use the following command:
 
-accessing name ["forms"]["name"]
+```sh
+python app/my_app.py
+```
 
-## Flask 
-
+To run the web application locally using the flask package:
 ```py
 export FLASK_APP=web_app
 flask run
 ```
+
+
+## Explaining API Key
+The pokéapi is an ever-evolving (no pun intended) list of pokémon. Each pokémon has its own url and dictionary with several keys. In this application, we only used the forms, name, and sprites attributes. Using the JSON module, we can parse through the nested dictionaries to get more readable info.
+
+For more information regarding Pokémon API visit https://pokeapi.co/docs/v2.html
+
+## HAVE FUN! 
