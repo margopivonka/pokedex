@@ -25,11 +25,8 @@ def quiz():
 @home_routes.route("/results", methods=["GET", "POST"])
 def quiz_submit(choice=None):
     print("SUBMITTED QUIZ RESULTS") #build API using inputs, not sure if we need this tbh
-    #print("FORM DATA:", dict(request.form)) #> {'full_name': 'Example User', 'email_address': 'me@example.com', 'country': 'US'}
-    #print("REQUEST VALUES:", dict(request.values))
+    
     results=dict(request.form) #turns user results into a dictionary so we can assign and add up the values
-    #print(results)
-    #print(results["choice1"])
 
     if results["choice1"]=="red":
         color_value=1
@@ -39,7 +36,6 @@ def quiz_submit(choice=None):
         color_value=3
     if results["choice1"]=="yellow":
         color_value=4
-    #print(color_value)
     
     if results["choice2"]=="fall":
         season_value=1
@@ -49,7 +45,6 @@ def quiz_submit(choice=None):
         season_value=3
     if results["choice2"]=="summer":
         season_value=4
-    #print(season_value)
 
     if results["choice3"]=="pizza":
         food_value=1
@@ -59,7 +54,6 @@ def quiz_submit(choice=None):
         food_value=3
     if results["choice3"]=="nugs":
         food_value=4
-    #print(food_value)
 
     if results["choice4"]=="dog":
         animal_value=1
@@ -69,7 +63,6 @@ def quiz_submit(choice=None):
         animal_value=3
     if results["choice4"]=="tiger":
         animal_value=4
-    #print(animal_value)
 
     if results["choice5"]=="earth":
         element_value=1
@@ -79,30 +72,17 @@ def quiz_submit(choice=None):
         element_value=3
     if results["choice5"]=="water":
         element_value=4
-    #print(element_value)
 
     user_score=color_value+season_value+food_value+animal_value+element_value
     print("SCORE: ", user_score)
 
+    flash("Quiz submitted successfully!", "success")
 
-
-    #
-    # should be able to use if statements to assign and add up values
-    #
-    #user = dict(request.form)
-    # todo: store in a database or google sheet!
-     # flash(f"User '{user['full_name']}' created successfully!", "success")
-    #flash(f"User '{user['full_name']}' created successfully! (TODO)", "warning")
     return redirect("/")
     #add redirect to take them to a page with poke icon
 
 
-    #def results(choice=None):
-    #print("VISITING THE RESULTS PAGE")
-    #print("REQUEST PARAMS:", dict(request.args))
-    #print("REQUEST VALUES:", dict(request.values))
-
-    options = ["rock", "paper", "scissors"]
+ 
 
 
 
