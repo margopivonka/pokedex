@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
-
 def pokemon_info(number):
     request_url = f"http://pokeapi.co/api/v2/pokemon/{user_score}"
     response = requests.get(request_url)
@@ -81,6 +80,4 @@ img = mpimg.imread(image_data)
 plt.imshow(img)
 plt.show()
 
-print(name)
-
-breakpoint()
+print(f"You are a {name}!")
