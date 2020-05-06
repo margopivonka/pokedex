@@ -21,8 +21,16 @@ def pokemon_image(number):
 
 if __name__ == "__main__":
 
-    # Favorite color
+    valid_options = ["A", "B", "C", "D"]
+
+    # FAVORITE COLOR
     color = input("What is your favorite color? \n A. Red \n B. Blue \n C. Green \n D. Yellow \n \n Please enter corresponding letter: ").upper()
+    
+    if color in valid_options:
+        pass
+    else:
+        print("Please choose either A, B, C, or D")
+        quit()
 
     if color =="A":
         color_value = 1
@@ -33,8 +41,14 @@ if __name__ == "__main__":
     elif color == "D":
         color_value = 4
 
-    # Favorite Season
+    # FAVORITE SEASON
     season = input("What is your favorite season? \n A. Fall \n B. Winter \n C. Spring \n D. Summer \n \n Please enter corresponding letter: ").upper()
+    
+    if season in valid_options:
+        pass
+    else:
+        print("Please choose either A, B, C, or D")
+        quit()
 
     if season =="A":
         season_value = 1
@@ -45,8 +59,14 @@ if __name__ == "__main__":
     elif season == "D":
         season_value = 4
 
-    # Favorite Food
+    # FAVORITE FOOD
     food = input("What is your favorite food? \n A. Pizza \n B. Tacos \n C. Noodles \n D. Burgers \n \n Please enter corresponding letter: ").upper()
+    
+    if food in valid_options:
+        pass
+    else:
+        print("Please choose either A, B, C, or D")
+        quit()
 
     if food =="A":
         food_value = 1
@@ -57,8 +77,14 @@ if __name__ == "__main__":
     elif food == "D":
         food_value = 4
 
-    # Favorite Animal
+    # FAVORITE ANIMAL
     animal = input("What is your favorite animal? \n A. Dog \n B. Cat \n C. Monkey \n D. Tiger \n \n Please enter corresponding letter: ").upper()
+    
+    if animal in valid_options:
+        pass
+    else:
+        print("Please choose either A, B, C, or D")
+        quit()
 
     if animal =="A":
         animal_value = 1
@@ -69,8 +95,14 @@ if __name__ == "__main__":
     elif animal == "D":
         animal_value = 4
 
-    # Elemental ID
+    # ELEMENTAL ID
     element = input("What earthly element do you best identify with? \n A. Earth \n B. Wind \n C. Fire \n D. Water \n \n Please enter corresponding letter: ").upper()
+    
+    if element in valid_options:
+        pass
+    else:
+        print("Please choose either A, B, C, or D")
+        quit()
 
     if element =="A":
         element_value = 1
@@ -80,10 +112,11 @@ if __name__ == "__main__":
         element_value = 3
     elif element == "D":
         element_value = 4
+    else:
+        element = input("Please enter either a, b, c, or d.")
 
     user_score=color_value+season_value+food_value+animal_value+element_value
-    scale = randint(1,40)
-    user_score = user_score * scale
+    user_score = user_score * randint(1,40)
 
     #FIND POKEMON NAME
     data = pokemon_info(user_score)
@@ -93,7 +126,7 @@ if __name__ == "__main__":
     image_data = pokemon_image(user_score)
     img = mpimg.imread(image_data)
 
-    #PRINT NAME AND IMAGE
+    #PRINT SCORE, NAME, IMAGE
     print("SCORE: ", user_score)
     print(f"You are a {name}! This means that you are totally awesome!!!")
     plt.imshow(img)
