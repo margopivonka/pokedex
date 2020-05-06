@@ -3,26 +3,23 @@
 #packages/modules to import
 import os
 import json
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+from random import randint
+from dotenv import load_dotenv
+import requests
 
 def pokemon_info(number):
-    import requests
     request_url = f"http://pokeapi.co/api/v2/pokemon/{number}"
     response = requests.get(request_url)
     parsed_response = json.loads(response.text)
     return parsed_response
 
 def pokemon_image(number):
-    import requests
     request_url2 = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{number}.png"
     return request_url2
 
 if __name__ == "__main__":
-
-    import matplotlib.pyplot as plt
-    import matplotlib.image as mpimg
-    from random import randint
-    from dotenv import load_dotenv
-    import requests
 
     valid_options = ["A", "B", "C", "D"]
 

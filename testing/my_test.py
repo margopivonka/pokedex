@@ -1,8 +1,9 @@
 # testing/my_test.py
 # test pokemon_name function
 
+import pytest
+
 from app.my_app import pokemon_info, pokemon_image
-import os
 
 def test_pokemon_info():
     result = pokemon_info(7)
