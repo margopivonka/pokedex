@@ -90,11 +90,9 @@ user_score = color_value + season_value + food_value + animal_value + element_va
 data = pokemon_info(user_score)
 name = data["name"].title()
 
-image_data = pokemon_image(user_score)
-img = mpimg.imread(image_data)
+image_link = pokemon_image(user_score)
+img = mpimg.imread(image_link)
 plt.imshow(img)
 plt.show()
 
-print(name)
-
-breakpoint()
+print("You are a total", name, "!")

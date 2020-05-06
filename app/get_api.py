@@ -34,7 +34,7 @@ img = mpimg.imread(image_data)
 plt.imshow(img)
 plt.show()
 
-print(name)
+print("You are a total",name, "!")
 
 
 
