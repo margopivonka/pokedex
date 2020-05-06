@@ -82,10 +82,6 @@ def quiz_submit(choice=None):
     #add redirect to take them to a page with poke icon
 
 
- 
-
-
-
 @home_routes.route("/animation")
 def animation():
     print("VISITED ANIMATION")
