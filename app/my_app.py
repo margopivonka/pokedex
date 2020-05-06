@@ -5,7 +5,7 @@ import os
 import json
 from random import randint
 from dotenv import load_dotenv
-import requests
+#import requests
 
 def pokemon_info(number):
     request_url = f"http://pokeapi.co/api/v2/pokemon/{number}"
@@ -18,7 +18,7 @@ def pokemon_image(number):
     return request_url2
 
 if __name__ == "__main__":
-    
+
     import matplotlib.pyplot as plt
     import matplotlib.image as mpimg
 
