@@ -2,7 +2,6 @@
 # test pokemon_name function
 
 import pytest
-
 from app.my_app import pokemon_info, pokemon_image
 
 def test_pokemon_info():
