@@ -1,5 +1,5 @@
 {% extends "bootstrap_layout.html" %}
-{% set active_page = "Results" %}
+{% set active_page = "pokemon" %}
 
 {% block content %}
 
@@ -17,7 +17,7 @@
         .button {
           background-color: #4CAF50;
           border: none;
-          color: white;
+          color: rgb(241, 241, 241);
           padding: 15px 25px;
           text-align: center;
           font-size: 16px;
@@ -29,6 +29,6 @@
         }
         </style>
 
-    <button type="button" onclick="alert('Hello world!')">Return Home!</button>
+    <button type="button" onclick="location.href='quiz'">Retake the Quiz!</button>
 
 {% endblock %}

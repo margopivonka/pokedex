@@ -22,7 +22,7 @@ def quiz():
     print("VISTED QUIZ PAGE")
     return render_template("quiz.html")
 
-@home_routes.route("/results/final")
+@home_routes.route("/pokemon")
 def quiz_results():
     print("VISITED RESULTS PAGE")
     return render_template("results.html")
