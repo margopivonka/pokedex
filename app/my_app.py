@@ -3,11 +3,12 @@
 #packages/modules to import
 import os
 import json
-import requests
 from dotenv import load_dotenv
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from random import randint
+load_dotenv()
+import requests
 
 def pokemon_info(number):
     request_url = f"http://pokeapi.co/api/v2/pokemon/{number}"
