@@ -6,9 +6,7 @@ from flask import Flask
 
 from web_app.routes.home_routes import home_routes
 
-
 load_dotenv()
-
 
 SECRET_KEY = os.getenv("SECRET_KEY", default="super secret")
 
@@ -17,8 +15,7 @@ def create_app():
     app.config["SECRET_KEY"] = SECRET_KEY
 
     app.register_blueprint(home_routes)
-
-
+    
     return app
 
 if __name__ == "__main__":
