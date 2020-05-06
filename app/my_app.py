@@ -3,8 +3,6 @@
 #packages/modules to import
 import os
 import json
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
 from random import randint
 from dotenv import load_dotenv
 import requests
@@ -20,6 +18,9 @@ def pokemon_image(number):
     return request_url2
 
 if __name__ == "__main__":
+    
+    import matplotlib.pyplot as plt
+    import matplotlib.image as mpimg
 
     valid_options = ["A", "B", "C", "D"]
 
