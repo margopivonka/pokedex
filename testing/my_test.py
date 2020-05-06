@@ -1,6 +1,8 @@
 # testing/my_test.py
 # test pokemon_name function
 
+import requests
+import json
 from app.my_app import pokemon_info, pokemon_image
 
 def test_pokemon_info():
