@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
+
 def pokemon_info(number):
     request_url = f"http://pokeapi.co/api/v2/pokemon/{user_score}"
     response = requests.get(request_url)
@@ -18,75 +19,60 @@ def pokemon_image(number):
     return request_url2
 
 # Favorite color
-color = input("What is your favorite color? \n A. Red \n B. Blue \n C. Green \n D. Yellow \n \n Please enter corresponding letter: ").upper()
+def get_score():
+    
+    if results["choice1"]=="red":
+        color_value=1
+    if results["choice1"]=="blue":
+        color_value=2
+    if results["choice1"]=="green":
+        color_value=3
+    if results["choice1"]=="yellow":
+        color_value=4
+    #print(color_value)
+    
+    if results["choice2"]=="fall":
+        season_value=1
+    if results["choice2"]=="winter":
+        season_value=2
+    if results["choice2"]=="spring":
+        season_value=3
+    if results["choice2"]=="summer":
+        season_value=4
+    #print(season_value)
 
-if color =="A":
-    color_value = 1
-elif color == "B":
-    color_value = 2
-elif color == "C":
-    color_value = 3
-elif color == "D":
-    color_value = 4
+    if results["choice3"]=="pizza":
+        food_value=1
+    if results["choice3"]=="tacos":
+        food_value=2
+    if results["choice3"]=="noodles":
+        food_value=3
+    if results["choice3"]=="nugs":
+        food_value=4
+    #print(food_value)
 
-user_score = color_value
+    if results["choice4"]=="dog":
+        animal_value=1
+    if results["choice4"]=="cat":
+        animal_value=2
+    if results["choice4"]=="monkey":
+        animal_value=3
+    if results["choice4"]=="tiger":
+        animal_value=4
+    #print(animal_value)
 
-# Favorite Season
-season = input("What is your favorite season? \n A. Fall \n B. Winter \n C. Spring \n D. Summer \n \n Please enter corresponding letter: ").upper()
+    if results["choice5"]=="earth":
+        element_value=1
+    if results["choice5"]=="wind":
+        element_value=2
+    if results["choice5"]=="fire":
+        element_value=3
+    if results["choice5"]=="water":
+        element_value=4
+    #print(element_value)
 
-if season =="A":
-    season_value = 1
-elif season == "B":
-    season_value = 2
-elif season == "C":
-    season_value = 3
-elif season == "D":
-    season_value = 4
-
-user_score = color_value + season_value
-
-# Favorite Food
-food = input("What is your favorite food? \n A. Pizza \n B. Tacos \n C. Noodles \n D. Burgers \n \n Please enter corresponding letter: ").upper()
-
-if food =="A":
-    food_value = 1
-elif food == "B":
-    food_value = 2
-elif food == "C":
-    food_value = 3
-elif food == "D":
-    food_value = 4
-
-user_score = color_value + season_value + food_value
-
-# Favorite Animal
-animal = input("What is your favorite animal? \n A. Dog \n B. Cat \n C. Monkey \n D. Tiger \n \n Please enter corresponding letter: ").upper()
-
-if animal =="A":
-    animal_value = 1
-elif animal == "B":
-    animal_value = 2
-elif animal == "C":
-    animal_value = 3
-elif animal == "D":
-    animal_value = 4
-
-user_score = color_value + season_value + food_value + animal_value
-
-# Elemental ID
-element = input("What earthly element do you best identify with? \n A. Earth \n B. Wind \n C. Fire \n D. Water \n \n Please enter corresponding letter: ").upper()
-
-if element =="A":
-    element_value = 1
-elif element == "B":
-    element_value = 2
-elif element == "C":
-    element_value = 3
-elif element == "D":
-    element_value = 4
-
-user_score = color_value + season_value + food_value + animal_value + element_value
-
+    user_score=color_value+season_value+food_value+animal_value+element_value
+    print("SCORE: ", user_score)
 data = pokemon_info(user_score)
 name = data["name"].title()
 

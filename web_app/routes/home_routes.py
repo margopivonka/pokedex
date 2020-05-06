@@ -1,7 +1,7 @@
 #web_app/routes/home_routes.py
 
 from flask import Blueprint, render_template, redirect, request, flash
-
+from random import randint
 home_routes = Blueprint("home_routes", __name__)
 
 #
@@ -103,6 +103,8 @@ def quiz_submit(choice=None):
     #print("REQUEST VALUES:", dict(request.values))
 
     options = ["rock", "paper", "scissors"]
+
+
 
 @home_routes.route("/animation")
 def animation():
