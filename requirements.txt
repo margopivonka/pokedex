@@ -1,10 +1,7 @@
 #requirements.txt file
 
 python-dotenv
-requests
 pytest
-matplotlib
-random
 
 Flask
 
