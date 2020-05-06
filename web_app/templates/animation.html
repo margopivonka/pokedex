@@ -1,16 +1,63 @@
-<style>
-    body {
-    background-color: rgb(255, 203, 5);
-    }
-</style>
-<img src="http://fc00.deviantart.net/fs70/i/2012/308/0/b/__hd___pokemon_logo___hd___by_peetzaahhh2010-d5k08gz.png" alt="Pokemon Logo" class="center"/>
+{% extends "bootstrap_layout.html" %}
+{% set active_page = "GIFs" %}
 
+{% block content %}
 
-<h2 id="title">Welcome to our App!...</h2>
+    <style>
+        body {
+        background-color: rgb(255, 203, 5);
+        }
+    </style>
+    <img src="http://fc00.deviantart.net/fs70/i/2012/308/0/b/__hd___pokemon_logo___hd___by_peetzaahhh2010-d5k08gz.png" alt="Pokemon Logo" class="center"/>
 
-    <div class="pokonami">
-        <h3>Click Anywhere to Begin</h3>
-    </div>
+    <h1>Enjoy Our Favorite GIFs</h1>
 
-    <audio id="pallet" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/pallet.mp3" autoplay muted preload></audio>
-    <audio id="battle" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/battle.mp3" preload muted autoplay></audio>
+    <br>
+
+    <style>
+        img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        </style>
+
+    <h3>On our way to take this quiz for the 100th time</h3>
+    <img src="https://media2.giphy.com/media/12TWOd7F94aZLq/source.gif" alt="YAY" style="width:450px;height:300px;" class = "center"/>
+
+    <br>
+    <br>
+
+    <h3>Our Mood after Finals</h3>
+    <img src="https://media.giphy.com/media/slVWEctHZKvWU/giphy.gif" alt="Relaxing Pikachu" style="width:450px;height:300px;" class = "center"/>
+
+    <br>
+    <br>
+
+    <h3>On the way to see friends after isolating for 2 months</h3>
+    <img src="https://media3.giphy.com/media/L74i6n6nxjUeA/source.gif" alt="Tepig sprint" style="width:450px;height:300px;" class = "center"/>
+
+    <br>
+    <br>
+
+    <h3>When Flask doesn't run. But you realize it's because you didn't type export FLASK_APP=web_app</h3>
+    <img src="https://33.media.tumblr.com/53e4a185513e2e6f5daf1bdaff6e7075/tumblr_n4tm7vXPUC1rsrk2xo1_500.gif" alt="Grrr" style="width:450px;height:300px;" class = "center"/>
+
+    <br>
+    <br>
+
+    <h3>Pokémon invented swag</h3>
+    <img src="https://thumbs.gfycat.com/BonySecondaryAmericanavocet-small.gif" alt="Squirtle swag" style="width:450px;height:300px;" class = "center"/>
+    <br>
+
+    <br>
+    <br>
+
+    <h3>If we get an A in this class</h3>
+    <img src="https://i.pinimg.com/originals/76/cb/ae/76cbae496483fffc4d2e48ee4008bf12.gif" alt="Jumping Pikachu" style="width:450px;height:300px;" class = "center"/>
+
+    <br>
+    <br>
+    <button type="button" class="center" onclick="location.href='quiz'">Take the Quiz!</button>
+
+{% endblock %}
