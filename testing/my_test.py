@@ -3,6 +3,7 @@
 
 from app.my_app import pokemon_info, pokemon_image
 import os
+import requests
 
 
 def test_pokemon_info():
