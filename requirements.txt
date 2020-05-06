@@ -2,7 +2,7 @@
 
 python-dotenv
 pytest
-
+requests
 Flask
 
 #Heroku uses this package to know which app to run
