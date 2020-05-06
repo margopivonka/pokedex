@@ -22,6 +22,11 @@ def quiz():
     print("VISTED QUIZ PAGE")
     return render_template("quiz.html")
 
+@home_routes.route("/results/final")
+def quiz_results():
+    print("VISITED RESULTS PAGE")
+    return render_template("results.html")
+
 @home_routes.route("/results", methods=["GET", "POST"])
 def quiz_submit(choice=None):
     print("SUBMITTED QUIZ RESULTS") #build API using inputs, not sure if we need this tbh

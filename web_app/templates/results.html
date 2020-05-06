@@ -1,0 +1,34 @@
+{% extends "bootstrap_layout.html" %}
+{% set active_page = "Results" %}
+
+{% block content %}
+
+    <style>
+        body {
+        background-color: rgb(255, 203, 5);
+        }
+    </style>
+    <img src="http://fc00.deviantart.net/fs70/i/2012/308/0/b/__hd___pokemon_logo___hd___by_peetzaahhh2010-d5k08gz.png" alt="Pokemon Logo" class="center"/>
+
+
+    <h1>Quiz Results</h1>
+
+    <style>
+        .button {
+          background-color: #4CAF50;
+          border: none;
+          color: white;
+          padding: 15px 25px;
+          text-align: center;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        
+        .button:hover {
+          background-color: rgb(131, 53, 167);
+        }
+        </style>
+
+    <button type="button" onclick="alert('Hello world!')">Return Home!</button>
+
+{% endblock %}
