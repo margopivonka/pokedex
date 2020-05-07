@@ -7,6 +7,8 @@ from random import randint
 from dotenv import load_dotenv
 import requests
 
+from app import APP_ENV
+
 def pokemon_info(number):
     request_url = f"http://pokeapi.co/api/v2/pokemon/{number}"
     response = requests.get(request_url)
