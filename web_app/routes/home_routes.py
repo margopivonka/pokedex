@@ -2,6 +2,7 @@
 
 from flask import Blueprint, render_template, redirect, request, flash
 from random import randint
+
 home_routes = Blueprint("home_routes", __name__)
 
 import os
@@ -10,7 +11,6 @@ import requests
 from dotenv import load_dotenv
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
-from random import randint
 
 #
 # Set up page routes
