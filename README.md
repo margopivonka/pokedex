@@ -51,7 +51,6 @@ flask run
 FLASK_APP=web_app flask run
 ```
 
-
 ## Explaining API Key
 The pokéapi is an ever-evolving (no pun intended) list of pokémon. Each pokémon has its own url and dictionary with several keys. In this application, we only used the forms, name, and sprites attributes. Using the JSON module, we can parse through the nested dictionaries to get more readable info.
 
