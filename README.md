@@ -38,13 +38,17 @@ json
 To run the application on your terminal use the following command:
 
 ```sh
-python app/my_app.py
+python -m app.my_app
 ```
 
 To run the web application locally using the flask package:
 ```py
+# WINDOWS:
 export FLASK_APP=web_app
 flask run
+
+#MAC
+FLASK_APP=web_app flask run
 ```
 
 
