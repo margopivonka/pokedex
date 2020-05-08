@@ -12,9 +12,7 @@ from dotenv import load_dotenv
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
-#
 # Set up page routes
-#
 @home_routes.route("/")
 def home_page():
     print("VISITED HOME PAGE")
