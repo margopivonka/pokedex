@@ -15,7 +15,7 @@ def create_app():
     app.config["SECRET_KEY"] = SECRET_KEY
 
     app.register_blueprint(home_routes)
-    
+
     return app
 
 if __name__ == "__main__":
