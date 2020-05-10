@@ -15,8 +15,10 @@ https://pokeapi.co/
 ```
 
 ## Usage
+Fork this repo and clone to your desktop. Then navigate there from the command line. 
 
 #### Set up a Virtual Enviornment
+
 ```sh
 conda create -n poke-env python=3.7
 conda activate poke-env
